@@ -1,4 +1,4 @@
-import * as service from './services';
+import {fetchWithTimeout} from './services';
 
 let movies = require('./data/movies.json');
 
@@ -6,7 +6,7 @@ let movies = require('./data/movies.json');
 export function fetchMovies(){
     const resolveFunction = () => movies;
 
-    service.fetchWithTimeout(1000).then(resolveFunction);
+    fetchWithTimeout(1000).then(resolveFunction);
 }
 
 let moviePromise = fetchMovies();
