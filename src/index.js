@@ -8,9 +8,9 @@ function getBooksAndMovies(){
 
 const getBooksAndMoviesPromise = getBooksAndMovies();
 
-getBooksAndMoviesPromise
-.then(reponse => Response.results)
-.then(console.log('getBooksandMovies', results));
+getBooksAndMoviesPromise.then(results => {
+    console.log('getBooksandMoviesPromise', results);
+});
 
 // const movies = require('./data/movies.json');
 
