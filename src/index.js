@@ -42,10 +42,10 @@ async function getBooksAndMoviesAsync(){
     }
 }
 
-async function getBooksOrMoviesAsync(){
-   const values = await Promise.race([asyncFetchBookss(), asyncFetchMovies()]);
-   return values;
-}
+async function getBooksOrMoviesAsync() {
+    const values = await Promise.race([asyncFetchBookss(), asyncFetchMovies()]);
+    return values;
+  }
 
 getBooksAndMoviesAsync()
 .then(results => {
